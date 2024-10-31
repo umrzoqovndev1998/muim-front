@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-xl sticky-top bg-white">
+    <nav class="navbar navbar-expand-xl sticky-top bg-white shadow">
         <div class="container-fluid">
             <button class="navbar-toggler shadow-none rounded-circle p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                 <span class="navbar-toggler-icon"></span>
