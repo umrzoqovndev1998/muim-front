@@ -5,19 +5,13 @@ import Footer from "@/components/Footer.vue";
 
 <template>
     <Header />
-    <div class="container-fluid default">
+    <div class="container-fluid">
         <router-view />
     </div>
     <Footer />
 </template>
 
 <style scoped>
-.default{
-    background-image: url("../assets/images/stars.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+
 
 </style>
