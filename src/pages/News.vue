@@ -8,7 +8,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -18,7 +18,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -28,7 +28,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -38,7 +38,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -48,7 +48,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -58,7 +58,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -68,7 +68,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     },
     {
         "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry." +
@@ -78,7 +78,7 @@ let news = [
             "remaining essentially unchanged. It was popularised in the 1960s with the release of " +
             "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing" +
             " software like Aldus PageMaker including versions of Lorem Ipsum",
-        "createdAt": new Date().toLocaleString().slice(0,17)
+        "createdAt": new Date().toLocaleString().slice(0,16)
     }
 ]
 
@@ -86,7 +86,7 @@ let news = [
 
 <template>
     <div class="container-fluid pt-5">
-        <h1 class="news-header text-center fw-light">Yangiliklar</h1>
+        <h2 class="news-header text-center fw-light bg-color text-white py-3 rounded">Yangiliklar</h2>
         <div class="news-cards">
             <div class="news-card py-5" v-for="data in news">
                 <p class="text-end px-md-4 mt-3 mt-md-0">{{data.createdAt}}</p>
@@ -107,7 +107,8 @@ let news = [
 .justify{
     text-align: justify !important;
 }
-*{
-    color: white;
+.bg-color{
+    background-color: #3498DB; /* Ko'k rang */
+
 }
 </style>

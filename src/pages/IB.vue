@@ -12,7 +12,7 @@
 
 <style scoped>
 p{
-    height: 50vh !important;
+    height: 60vh !important;
 }
 
 </style>

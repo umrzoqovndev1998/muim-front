@@ -45,8 +45,5 @@
 </template>
 
 <style scoped>
-*{
-    color: white !important;
-}
 
 </style>

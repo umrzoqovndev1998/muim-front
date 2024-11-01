@@ -6,40 +6,45 @@
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-xl sticky-top bg-white shadow">
+    <nav class="navbar navbar-expand-xl sticky-top bg-white shadow-header">
         <div class="container-fluid">
             <button class="navbar-toggler shadow-none rounded-circle p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <router-link class="navbar-brand" to="/">
+            <router-link to="/">
                 <img class="image" src="../assets/images/logo.jpg" alt="Logo">
             </router-link>
             <div class="offcanvas offcanvas-start" id="offcanvasWithBackdrop">
                 <div class="offcanvas-header">
+                    <router-link to="/">
+                    <div class="offcanvas-logo">
+                        <img src="../assets/images/logo.jpg" alt="logo image">
+                    </div>
+                    </router-link>
                     <button type="button" class="btn-close text-reset shadow-none rounded-circle p-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body d-xl-flex">
+                <div class="offcanvas-body">
                     <ul class="navbar-nav col-xl-9 justify-content-xl-center">
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/" active-class="active">{{ $t('home') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/" active-class="active">{{ $t('home') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/about" active-class="active">{{ $t('about') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/about" active-class="active">{{ $t('about') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/management" active-class="active">{{ $t('leadership') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/management" active-class="active">{{ $t('leadership') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/teachers" active-class="active">{{ $t('teachers') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/teachers" active-class="active">{{ $t('teachers') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/ib" active-class="active">{{ $t('ib') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/ib" active-class="active">{{ $t('ib') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/news" active-class="active">{{ $t('news') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/news" active-class="active">{{ $t('news') }}</router-link>
                         </li>
-                        <li class="nav-item" data-bs-dismiss="offcanvas">
-                            <router-link class="nav-link nlink" to="/contact" active-class="active">{{ $t('contact') }}</router-link>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/contact" active-class="active">{{ $t('contact') }}</router-link>
                         </li>
                     </ul>
                     <form class="d-flex col-xl-3 m-2 m-xl-0">
@@ -103,5 +108,14 @@
 select:hover{
     cursor: pointer !important;
 }
+.offcanvas-logo img{
+    width: 80px;
+    height: 60px;
+}
+.shadow-header{
+    box-shadow: 0px 4px 10px rgba(135, 206, 235, 0.5); /* Havo rang shadow */
+    border-bottom: 2px solid #87CEEB; /* Havo rang chiziq */
+}
+
 
 </style>

@@ -4,7 +4,7 @@
 
 <template>
      <div class="container-fluid bg-dark d-flex justify-content-xxl-between justify-content-around  flex-wrap">
-         <div class="contact-with-we mt-2 mb-2">
+         <div class="contact-with-we mt-4 mb-2 ms-xl-2">
              <h2 class="text-center">Aloqa ma'lumotlari</h2>
              <div class="location">
               <p><b>Manzil:</b> Toshkent shahar,Yunusobod tumani,Chingiz aytmatov 1-tor ko'chasi</p>
@@ -16,16 +16,16 @@
              <b>Tel:</b> <a class="nav-link ms-2" href="tel:+998977777777">+998977777777</a>
              </div>
          </div>
-         <div class="social-networks mt-2">
+         <div class="social-networks mt-4">
              <h2 class="text-center">Ijtimoiy tarmoqlar</h2>
              <ul class="nav navbar">
-                 <li class="nav-item"><a class="nav-link" href="#">Facebook</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Telegram</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Instagram</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">YouTube</a></li>
+                 <li class="nav-item"><a class="nav-link" href="#"><img class="footer-logo" src="../assets/icons/facebook.png" alt=""></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#"><img class="footer-logo" src="../assets/icons/telegram.png" alt=""></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#"><img class="footer-logo" src="../assets/icons/instagram.png" alt=""></a></li>
+                 <li class="nav-item"><a class="nav-link" href="#"><img class="footer-logo" src="../assets/icons/youtube.png" alt=""></a></li>
              </ul>
          </div>
-         <div class="feedback mt-2">
+         <div class="feedback mt-4 me-xl-2">
              <h2 class="text-center">Qayta aloqa</h2>
              <form class="d-flex flex-column">
                  <label for="fName">
@@ -34,7 +34,7 @@
                  <label for="tel">
                      <input class="form-control shadow-none mb-2" placeholder="Tel" size="40" type="tel" id="tel" name="tel" />
                  </label>
-                 <input class="form-control mb-4" type="submit"  value="Yuborish"/>
+                 <input class="form-control mb-4" type="submit" value="Yuborish"/>
              </form>
          </div>
      </div>
@@ -45,15 +45,20 @@
     color: white;
 }
 [type="submit"]{
-    color: blue !important;
+    color: white !important;
+    background-color: #3498DB !important; /* Ko'k rang */
     border: none !important;
 }
 .nav-link:hover{
     color: blue !important;
 }
 [type="submit"]:hover{
-    background-color: blue !important;
+    background-color: #21618C !important; /* Sal to'q ko'k rang */
     color: white !important;
+}
+.footer-logo{
+    width: 40px;
+    height: 40px;
 }
 
 </style>

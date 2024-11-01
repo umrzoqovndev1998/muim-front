@@ -72,8 +72,5 @@
 .content-classroom,.content-library,.content-school{
     text-align: justify !important;
 }
-*{
-    color: white !important;
-}
 
 </style>
