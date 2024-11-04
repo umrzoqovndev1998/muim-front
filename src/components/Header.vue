@@ -8,13 +8,13 @@
 <template>
     <nav class="navbar navbar-expand-xl sticky-top bg-white shadow-header">
         <div class="container-fluid">
-            <button class="navbar-toggler shadow-none rounded-circle p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+            <button class="navbar-toggler shadow-none rounded-circle p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <router-link to="/">
                 <img class="image" src="../assets/images/logo.jpg" alt="Logo">
             </router-link>
-            <div class="offcanvas offcanvas-start" id="offcanvasWithBackdrop">
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
                     <router-link to="/">
                     <div class="offcanvas-logo">
