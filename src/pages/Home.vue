@@ -54,11 +54,11 @@ let array = [
 </div>
             </div>
             <div class="caption-text mt-5 mt-md-0 col-md-4 d-flex align-items-center justify-content-center">
-                <h1 class="text-center ms-md-5 fw-light bg-color text-white rounded py-xl-5 py-md-1 px-md-1 px-2 py-2">Biz bilan o'z kelajagingizni quring!</h1>
+                <h1 class="text-center ms-md-5 fw-light bg-color-v text-white rounded py-xl-5 py-md-1 px-md-1 px-2 py-2">Biz bilan o'z kelajagingizni quring!</h1>
             </div>
         </div>
         <div class="description-section mt-5">
-            <p class="w-100 mx-auto mb-5 fs-4 text-white bg-color p-3 rounded">
+            <p class="w-100 mx-auto mb-5 fs-4 text-white bg-color-h p-3 rounded">
                 Mirzo ulug'bek maktabi Toshkent shahar,Yunusobod tumani, Chingiz Aytmatov, 1-tor ko'chasida joylashgan.
                 Bizning maktabda Matematika,Fizika,Ingliz tili va Informatika fanlari chuqurlashtirilgan holda o'tiladi.
                 Maktabimizga o'quvchilarimiz yutuqlari va bitiruvchilarimiz natijalari orqali baho berishingiz mumkin.
@@ -66,7 +66,7 @@ let array = [
             </p>
         </div>
         <div class="pupils-results">
-            <h2 class="text-center fw-light text-white bg-color rounded py-3">O'quvchilarimiz yutuqlari</h2>
+            <h2 class="text-center fw-light bg-color-p rounded py-3">O'quvchilarimiz yutuqlari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
                 <div class="card mt-5 mb-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array" :key="member">
                     <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
@@ -78,7 +78,7 @@ let array = [
             </div>
         </div>
         <div class="graduates-results">
-            <h2 class="text-center fw-light bg-color text-white py-3 rounded">Bitiruvchilarimiz natijalari</h2>
+            <h2 class="text-center fw-light bg-color-p py-3 rounded">Bitiruvchilarimiz natijalari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
                 <div class="card mt-5 mb-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array">
                     <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
@@ -134,5 +134,20 @@ let array = [
 .shadow-links{
     box-shadow: 0px 0px 10px rgba(96, 195, 235); /* Havo rang shadow */
     /* border-bottom: 2px solid #87CEEB; Havo rang chiziq */
+}
+.bg-color-p{
+    background-image: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+
+}
+.bg-color-h{
+    background-color: #6a11cb; /* Yorqin binafsha */
+    background-image: linear-gradient(135deg, #6a11cb, #2575fc); /* Binafsha va ko'k gradienti */
+
+}
+.bg-color-v{
+    background-color: #9b59b6; /* Binafsha rang */
+background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Binafsha gradienti */
+
 }
 </style>

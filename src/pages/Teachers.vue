@@ -34,7 +34,7 @@ let teachers = [
 <template>
     <div class="container-fluid pt-5">
         <div class="math-teachers w-100">
-            <h2 class="text-center fw-light bg-color py-3 text-white rounded">Matematika o'qituvchilari</h2>
+            <h2 class="text-center fw-light bg-color py-3 rounded">Matematika o'qituvchilari</h2>
             <div class="list-teachers d-xl-flex flex-xl-wrap justify-content-around d-md-flex flex-md-wrap">
                 <div class="teacher ms-xl-3 me-xl-3 mt-5 mb-5 ms-md-3 me-md-3 col-xl-3 col-md-4 shadow rounded p-3" v-for="teacher in teachers">
                 <div class="image"><img src="../assets/images/enter.jpeg" alt="image" class="w-100 rounded"></div>
@@ -44,7 +44,7 @@ let teachers = [
             </div>
         </div>
     <div class="physics-teachers w-100">
-        <h2 class="text-center fw-light bg-color py-3 text-white rounded">Fizika o'qituvchilari</h2>
+        <h2 class="text-center fw-light bg-color py-3 rounded">Fizika o'qituvchilari</h2>
         <div class="list-teachers d-xl-flex flex-xl-wrap justify-content-around d-md-flex flex-md-wrap">
             <div class="teacher ms-xl-3 me-xl-3 mt-5 mb-5 ms-md-3 me-md-3 col-xl-3 col-md-4 shadow rounded p-3" v-for="teacher in teachers">
                 <div class="image"><img src="../assets/images/enter.jpeg" alt="image" class="w-100 rounded"></div>
@@ -54,7 +54,7 @@ let teachers = [
         </div>
     </div>
     <div class="english-teachers w-100">
-        <h2 class="text-center fw-light bg-color py-3 text-white rounded">Ingliz tili o'qituvchilari</h2>
+        <h2 class="text-center fw-light bg-color py-3 rounded">Ingliz tili o'qituvchilari</h2>
         <div class="list-teachers d-xl-flex flex-xl-wrap justify-content-around d-md-flex flex-md-wrap">
             <div class="teacher ms-xl-3 me-xl-3 mt-5 mb-5 ms-md-3 me-md-3 col-xl-3 col-md-4 shadow rounded p-3" v-for="teacher in teachers">
                 <div class="image"><img src="../assets/images/enter.jpeg" alt="image" class="w-100 rounded"></div>
@@ -64,7 +64,7 @@ let teachers = [
         </div>
     </div>
     <div class="other-teachers w-100">
-        <h2 class="text-center fw-light bg-color py-3 text-white rounded">Boshqa fan o'qituvchilari</h2>
+        <h2 class="text-center fw-light bg-color py-3 rounded">Boshqa fan o'qituvchilari</h2>
         <div class="list-teachers d-xl-flex flex-xl-wrap justify-content-around d-md-flex flex-md-wrap pb-5">
             <div class="teacher ms-xl-3 me-xl-3 mt-5 ms-md-3 me-md-3 col-xl-3 col-md-4 shadow rounded p-3" v-for="teacher in teachers">
                 <div class="image"><img src="../assets/images/enter.jpeg" alt="image" class="w-100 rounded"></div>
@@ -87,7 +87,11 @@ let teachers = [
     background-color: white;
 }
 .bg-color{
-    background-color: #3498DB; /* Ko'k rang */
+    background-image: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4 50%, #fbc2eb 75%);
 
+}
+h2{
+    color: #333;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
 }
 </style>

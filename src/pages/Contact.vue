@@ -9,7 +9,7 @@
         </div>
         <div class="col-md-6 mb-5">
             <table class="w-100">
-                <thead class="text-center bg-primary text-white">
+                <thead class="text-center bg-color text-white">
                    <tr>
                        <th>Aloqa</th>
                        <th>Ma'lumot</th>
@@ -44,5 +44,9 @@ table{
     background-color: #e3dfdf;
     text-align: center;
 }
+.bg-color{
+    background-color: #f39c12; /* Oltin rang */
+background: linear-gradient(45deg, #f39c12, #e67e22); /* Oltin va issiq to'q sariq gradienti */
 
+}
 </style>

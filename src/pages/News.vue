@@ -86,7 +86,7 @@ let news = [
 
 <template>
     <div class="container-fluid pt-5">
-        <h2 class="news-header text-center fw-light bg-color text-white py-3 rounded">Yangiliklar</h2>
+        <h2 class="news-header text-center fw-light bg-color py-3 rounded">Yangiliklar</h2>
         <div class="news-cards">
             <div class="news-card py-5" v-for="data in news">
                 <p class="text-end px-md-4 mt-3 mt-md-0">{{data.createdAt}}</p>
@@ -108,7 +108,10 @@ let news = [
     text-align: justify !important;
 }
 .bg-color{
-    background-color: #3498DB; /* Ko'k rang */
+    background-color: #a8ff78;
+    background-image: linear-gradient(45deg, #a8ff78, #78ffd6);
+    color: #333;
+
 
 }
 </style>
