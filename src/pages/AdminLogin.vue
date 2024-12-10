@@ -22,7 +22,7 @@ function auth() {
              <FormInput v-model="authorization.password" props-id="password" label-name="Parol" input-type="password" />
             <div class="text-end text-center mt-4">
                 <button type="button" @click="auth" class="form-control shadow-none bg-primary text-white">
-                    <span v-if="!isLoading">Kirish</span>
+                    <span v-if="!isLoading" class="fs-5">Kirish</span>
                     <span v-if="isLoading" class="spinner-border spinner-border-sm text-light"></span>
                 </button>
             </div>

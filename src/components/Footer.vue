@@ -12,8 +12,11 @@
              <div class="email mb-3 d-flex">
               <b>Email:</b> <a class="nav-link ms-2" href="mailto:muimi@gmail.com">muimi@gmail.com</a>
              </div>
-             <div class="tel d-flex">
+             <div class="tel d-flex mb-3">
              <b>Tel:</b> <a class="nav-link ms-2" href="tel:+998977777777">+998977777777</a>
+             </div>
+             <div class="admin d-flex">
+                <router-link class="nav-link" to="/admin">Admin</router-link>
              </div>
          </div>
          <div class="social-networks mt-4">
@@ -50,7 +53,7 @@
     border: none !important;
 }
 .nav-link:hover{
-    color: blue !important;
+    border-bottom: 1px solid white;
 }
 [type="submit"]:hover{
     background-color: #21618C !important; /* Sal to'q ko'k rang */

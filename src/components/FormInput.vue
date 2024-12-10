@@ -17,7 +17,7 @@ defineEmits(['Update:modelValue'])
 
 <template>
     <div class="mb-3">
-        <label :for="propsId" class="form-label shadow-none">{{ labelName }}</label>
+        <label :for="propsId" class="form-label shadow-none fs-5">{{ labelName }}</label>
         <input @input="$emit('Update:modelValue',$event.target.value)" :id="propsId" :type="inputType" class="form-control shadow-none">
     </div>
 
