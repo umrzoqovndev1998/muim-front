@@ -150,4 +150,10 @@ let array = [
 background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Binafsha gradienti */
 
 }
+.card{
+    background-image: linear-gradient(135deg, #83FFA6, #FFFFFF);
+}
+.card:hover{
+    box-shadow: 0 0 10px blue !important;
+}
 </style>

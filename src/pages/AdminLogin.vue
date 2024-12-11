@@ -1,8 +1,11 @@
 <script setup>
 import FormInput from "@/components/FormInput.vue";
 import {ref,reactive} from "vue";
+import { useAuthorization } from "@/stores/admin/authorization.js";
+import { useRouter } from "vue-router";
 
 let isLoading = ref(false);
+const router = useRouter();
 let authorization = reactive({
     email: '',
     password: ''
@@ -10,6 +13,10 @@ let authorization = reactive({
 
 function auth() {
     isLoading.value = true;
+    useAuthorization().adminAuth(authorization)
+    .then(()=>{
+        router.push('/statistics')
+    })
 }
 </script>
 

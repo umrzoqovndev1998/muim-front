@@ -84,7 +84,8 @@ let teachers = [
     box-shadow: 0 0 10px blue !important;
 }
 .teacher{
-    background-color: white;
+    background-image:linear-gradient(-45deg,#FFFFFF, #B3E5FC, #0277BD);
+
 }
 .bg-color{
     background-image: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4 50%, #fbc2eb 75%);

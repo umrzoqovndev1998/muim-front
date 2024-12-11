@@ -13,6 +13,16 @@ import SchoolView from '../pages/SchoolMembersStatistics.vue'
 import SchoolNewsView from '../pages/SchoolNewsStatistics.vue'
 
 
+const ifAuthorized = (to,from,next)=>{
+    if(localStorage.getItem('token')!==null){
+        next()
+    }
+    else{
+        next('/admin')
+    }
+}
+
+
 const routes = [
     {
         path: '/',
@@ -57,12 +67,14 @@ const routes = [
     {
         path: '/statistics',
         component: SchoolView,
-        meta: {layout: defineAsyncComponent(() => import('@/layouts/MainBlankLayout.vue'))}
+        meta: {layout: defineAsyncComponent(() => import('@/layouts/MainBlankLayout.vue'))},
+        beforeEnter:ifAuthorized
     },
     {
         path: '/statistics/news',
         component: SchoolNewsView,
-        meta: {layout: defineAsyncComponent(() => import('@/layouts/MainBlankLayout.vue'))}
+        meta: {layout: defineAsyncComponent(() => import('@/layouts/MainBlankLayout.vue'))},
+        beforeEnter:ifAuthorized
     },
 
 ]
