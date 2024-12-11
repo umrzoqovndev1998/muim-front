@@ -53,7 +53,7 @@
     border: none !important;
 }
 .nav-link:hover{
-    border-bottom: 1px solid white;
+    text-decoration: underline;
 }
 [type="submit"]:hover{
     background-color: #21618C !important; /* Sal to'q ko'k rang */
