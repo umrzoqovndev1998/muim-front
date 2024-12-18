@@ -8,7 +8,7 @@ let isLoading = ref(false);
 const router = useRouter();
 let change = ref(false);
 let password = ref("password");
-let pathImg = ref("src/assets/icons/show.png");
+let pathImg = ref("./src/assets/icons/show.png");
 let authorization = reactive({
     email: '',
     password: ''
@@ -34,11 +34,11 @@ function auth(event) {
 function changeIcon(){
     change.value = !change.value;
     if(change.value){
-        pathImg.value = "src/assets/icons/hide.png";
+        pathImg.value = "./src/assets/icons/hide.png";
         password.value = "text";
     }
     else{
-        pathImg.value = "src/assets/icons/show.png";
+        pathImg.value = "./src/assets/icons/show.png";
         password.value = "password" 
     }
 
