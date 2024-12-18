@@ -68,7 +68,7 @@ let array = [
         <div class="pupils-results">
             <h2 class="text-center fw-light bg-color-p rounded py-3">O'quvchilarimiz yutuqlari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
-                <div class="card mt-5 mb-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array" :key="member">
+                <div class="card mt-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array" :key="member">
                     <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
                     <div class="card-body">
                         <h5 class="card-title fw-light text-center">{{ member.fullName }}</h5>
@@ -78,9 +78,9 @@ let array = [
             </div>
         </div>
         <div class="graduates-results">
-            <h2 class="text-center fw-light bg-color-p py-3 rounded">Bitiruvchilarimiz natijalari</h2>
+            <h2 class="text-center fw-light bg-color-p py-3 rounded mt-5">Bitiruvchilarimiz natijalari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
-                <div class="card mt-5 mb-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array">
+                <div class="card mt-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array">
                     <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
                     <div class="card-body">
                         <h5 class="card-title fw-light text-center">{{ member.fullName }}</h5>
@@ -90,7 +90,7 @@ let array = [
             </div>
         </div>
         <div class="useful-links pb-3 mb-4">
-            <h2 class="text-center fw-light mb-5 bg-color text-white py-3 rounded">Foydali havolalar</h2>
+            <h2 class="text-center fw-light mb-5 bg-color text-white py-3 rounded mt-5">Foydali havolalar</h2>
             <ul class="nav navbar justify-content-around shadow-links rounded bg-white">
                 <li class="nav-item"><a href="https://www.ibo.org" target="_blank" class="nav-link">
                     <img src="../assets/images/ib-logo.png" alt="IB logo">
@@ -98,7 +98,7 @@ let array = [
                 <li class="nav-item"><a href="https://piima.uz" class="nav-link" target="_blank">
                     <img src="../assets/images/piima-logo.png" alt="PIIMA logo">
                 </a></li>
-                <li class="nav-item"><a href="https://my.gov.uz/en/tourism/index" class="nav-link" target="_blank">
+                <li class="nav-item"><a href="https://my.gov.uz" class="nav-link" target="_blank">
                     <img src="../assets/images/mygov-logo.jpg" alt="MyGov logo">
                 </a></li>
                 <li class="nav-item"><a href="https://www.lex.uz" class="nav-link" target="_blank">

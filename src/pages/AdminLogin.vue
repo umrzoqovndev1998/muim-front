@@ -70,8 +70,8 @@ function changeIcon(){
              <img :src="pathIcon" alt="" width="15px">
             </button>
             <div class="text-end text-center mt-4">
-                <button type="submit" class="form-control shadow-none bg-primary text-white">
-                    <span v-if="!isLoading" class="fs-5">Kirish</span>
+                <button type="submit" class="form-control shadow-none bg-primary text-white fs-5">
+                    <span v-if="!isLoading">Kirish</span>
                     <span v-else class="spinner-border spinner-border-sm text-light"></span>
                 </button>
             </div>
