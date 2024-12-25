@@ -1,6 +1,39 @@
 <script setup>
 
 import AddButton from "@/components/AddButton.vue";
+import { reactive,ref } from "vue";
+import { useAddFile } from "@/stores/mediaObject/addFile.js";
+import { useNews } from "@/stores/news/createNews.js";
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+let image = ref(null)
+let file = ref()
+let news = reactive({
+    title: '',
+    content: '',
+    createdAt: new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Tashkent",
+}),
+    image: ''
+})
+
+function selectImage(event){
+    file = event.target.files[0]
+    image.value = URL.createObjectURL(event.target.files[0])
+}
+
+function create(){
+    useAddFile().addFile(file)
+        .then((res) =>{
+            news.image = res.data['@id']
+
+            useNews().newsCreate(news)
+                .then(() =>{ 
+                    router.push('/statistics/news')
+                 })
+        })
+}
 </script>
 
 <template>
@@ -16,12 +49,14 @@ import AddButton from "@/components/AddButton.vue";
                     </div>
                     <div class="modal-body">
                             <label for="image" class="form-label">Media</label>
-                            <input id="image" type="file" class="form-control mb-3 shadow-none"/>
+                            <input @change="selectImage($event)" id="image" type="file" class="form-control mb-3 shadow-none"/>
+                            <label for="title" class="form-label">Sarlavha</label>
+                            <input v-model="news.title" type="text" id="title" class="form-control mb-3 shadow-none">
                             <label class="form-label" for="data">Ma'lumot</label> <br>
-                            <textarea id="data" class="form-control shadow-none" cols="50" rows="5"></textarea>
+                            <textarea v-model="news.content" id="data" class="form-control shadow-none" cols="50" rows="5"></textarea>
                     </div>
                     <div class="modal-footer border-0">
-                        <button class="btn btn-primary">Saqlash</button>
+                        <button @click="create()" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Saqlash</button>
                     </div>
                 </div>
             </div>
