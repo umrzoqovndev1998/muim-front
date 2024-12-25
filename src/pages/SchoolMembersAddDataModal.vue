@@ -14,7 +14,6 @@ import AddButton from "@/components/AddButton.vue";
                         <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="form">
                             <label for="image" class="form-label">Rasm</label>
                             <input id="image" type="file" class="form-control mb-3 shadow-none"/>
                             <label for="fio" class="form-label">FIO</label>
@@ -41,10 +40,9 @@ import AddButton from "@/components/AddButton.vue";
                             </select>
                             <label class="form-label" for="data">Ma'lumot</label> <br>
                             <textarea id="data" class="form-control shadow-none" cols="50" rows="5"></textarea>
-                        </form>
                     </div>
                     <div class="modal-footer border-0">
-                        <button form="form" class="btn btn-primary">Saqlash</button>
+                        <button class="btn btn-primary">Saqlash</button>
                     </div>
                 </div>
             </div>
