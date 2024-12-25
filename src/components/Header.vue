@@ -116,6 +116,9 @@ select:hover{
     box-shadow: 0px 4px 10px rgba(135, 206, 235, 0.5); /* Havo rang shadow */
     border-bottom: 2px solid #87CEEB; /* Havo rang chiziq */
 }
+select{
+    background-color: white !important;
+}
 
 
 </style>

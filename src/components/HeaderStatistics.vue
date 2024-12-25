@@ -96,7 +96,6 @@ select{
     cursor: pointer !important;
     padding: 7px 10px !important;
     background-color: white;
-    border: 1px solid blue !important;
 }
 .lang-btn button{
     color: blue;
