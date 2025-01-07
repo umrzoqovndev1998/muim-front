@@ -44,7 +44,10 @@ function changeIcon(){
 </script>
 
 <template>
-<div class="container-fluid row d-flex justify-content-center align-items-center">
+<div class="container-fluid row d-flex justify-content-center">
+    <router-link to="/">
+        <img src="../assets/icons/back.png" alt="home page link">
+    </router-link>
     <div class="col-12 col-sm-8 col-md-6 col-xl-4 ms-4">
         <h1 class="text-center fw-normal">Kirish</h1>
         <form @submit="auth">
@@ -101,5 +104,13 @@ form{
 }
 .form-btn:hover{
     background-color: rgb(230, 229, 229);
+}
+img{
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 10px;
+}
+img:hover{
+    background-color: #e3dfdf;
 }
 </style>
