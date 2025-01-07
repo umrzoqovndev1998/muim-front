@@ -20,15 +20,14 @@ function auth(event) {
     useAuthorization()
         .adminAuth(authorization)
         .then(() => {
-            router.push('/statistics');
+            router.push('/statistics')
         })
-        .catch((error) => {
-            alert("Email yoki parol noto'g'ri!"); 
-            console.error("Auth error:", error);
+        .catch(() => {
+            alert("Email yoki parol noto'g'ri!")
         })
         .finally(() => {
-            isLoading.value = false;
-        });
+            isLoading.value = false
+        })
 }
 function changeIcon(){
     change.value = !change.value;

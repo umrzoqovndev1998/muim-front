@@ -14,7 +14,7 @@ import SchoolNewsView from '../pages/SchoolNewsStatistics.vue'
 
 
 const ifAuthorized = (to,from,next)=>{
-    if(localStorage.getItem('token')!==null){
+    if(localStorage.getItem('token') !== null){
         next()
     }
     else{

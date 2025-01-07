@@ -2,12 +2,17 @@ import { defineStore } from "pinia";
 import axios from "axios";
 
 
-axios.interceptors.request.use((config)=>{
-    config.headers = {}
-    config.headers.Authorization = 'Bearer ' + localStorage.getItem('token')
-
+axios.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token');
+    if (token) {
+        config.headers = {
+            ...config.headers,
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+    }
     return config
 })
+
 export const useNews = defineStore('new',() =>{
     function newsCreate(data){
         return new Promise((resolve,reject) => {
