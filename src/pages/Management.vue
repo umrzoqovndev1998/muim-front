@@ -1,4 +1,13 @@
 <script setup>
+import { computed } from 'vue';
+import { useFetchSchoolMembers } from '@/stores/schoolMember/getSchoolMember.js';
+
+useFetchSchoolMembers().schoolMembersGet()
+const schoolMembers = computed(() => useFetchSchoolMembers().state.schoolMembers)
+
+const direktor = computed(() => {
+    return schoolMembers.value.filter(member => member.task === "Direktor");
+})
 
 </script>
 
@@ -9,7 +18,7 @@
             <div class="image col-xl-4">
                 <img src="../assets/images/enter.jpeg" alt="image" class="w-100 rounded">
             </div>
-            <h2 class="text-center mt-3 fw-light">Bekov Baxtiyor Murodxo'jayevich</h2>
+            <h2 class="text-center mt-3 fw-light" v-for="member in direktor">{{ member.full_name }}</h2>
         </div>
         <div class="assistents d-flex flex-wrap justify-content-xl-center">
             <div class="assistant me-xl-5 col-xl-4 mt-5">

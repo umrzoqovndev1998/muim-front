@@ -39,12 +39,12 @@ function logOut(){
                 </div>
             </div>
             <div class="lang-btn">
-                <select @change="i18n.locale.value = $event.target.value" :value="i18n.locale.value" class="ms-xl-2 me-2 me-xl-0 border rounded focus">
+                <select @change="i18n.locale.value = $event.target.value" :value="i18n.locale.value" class="ms-xl-2 me-2 me-xl-0 border rounded">
                     <option value="uz">UZ</option>
                     <option value="ru">RU</option>
                     <option value="en">EN</option>
                 </select>
-                <button @click="logOut()" class="rounded">Chiqish</button>
+                <button @click="logOut()" type="button" class="btn btn-outline-primary">Chiqish</button>
             </div>
         </div>
     </nav>
@@ -54,9 +54,6 @@ function logOut(){
 .image{
     width:120px;
     height:90px;
-}
-.focus{
-    outline:none !important;
 }
 .navbar-toggler{
     border: none;
@@ -94,27 +91,17 @@ function logOut(){
 }
 select{
     cursor: pointer !important;
-    padding: 7px 10px !important;
+    padding: 8px !important;
     background-color: white;
-}
-.lang-btn button{
-    color: blue;
-    border: 1px solid blue;
-    background-color: white;
-    padding: 4px 6px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
-    margin-left: 25px;
-
+    outline: none !important;
 }
 .lang-btn{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.lang-btn button:hover{
-    background-color: blue !important;
-    color: white !important;
+.lang-btn button{
+    margin-left: 30px !important;
 }
 
 </style>

@@ -1,96 +1,88 @@
 <script setup>
-let array = [
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    },
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    },
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    },
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    },
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    },
-    {
-        'fullName': 'Umrzoqov Nurmuhammad',
-        'aboutMember': "Ikkinchi toifali matematika o'qituvchisi"
-    }
-]
+
+import { computed } from 'vue';
+import { useFetchSchoolMembers } from '@/stores/schoolMember/getSchoolMember.js';
+
+useFetchSchoolMembers().schoolMembersGet()
+const schoolMembers = computed(() => useFetchSchoolMembers().state.schoolMembers)
+
+const pupils = computed(() => {
+    return schoolMembers.value.filter(member => member.role === "O'quvchi");
+})
+
 </script>
 
 <template>
     <div class="container-fluid pt-5">
-        <div class="caption-section d-md-flex align-items-md-center justify-content-md-center">
-            <div class="caption-image rounded shadow col-md-6">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner rounded">
-    <div class="carousel-item active" data-bs-interval="2000">
-      <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="caption-text mt-5 mt-md-0 col-md-4 d-flex align-items-center justify-content-center">
-                <h1 class="text-center ms-md-5 fw-light bg-color-v text-white rounded py-xl-5 py-md-1 px-md-1 px-2 py-2">Biz bilan o'z kelajagingizni quring!</h1>
+            <div class="carousel-inner rounded mb-5">
+                <div class="carousel-item active">
+                    <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/images/enter.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="description-section mt-5">
-            <p class="w-100 mx-auto mb-5 fs-4 text-white bg-color-h p-3 rounded">
-                Mirzo ulug'bek maktabi Toshkent shahar,Yunusobod tumani, Chingiz Aytmatov, 1-tor ko'chasida joylashgan.
-                Bizning maktabda Matematika,Fizika,Ingliz tili va Informatika fanlari chuqurlashtirilgan holda o'tiladi.
-                Maktabimizga o'quvchilarimiz yutuqlari va bitiruvchilarimiz natijalari orqali baho berishingiz mumkin.
-                Agar siz ham shunday yutuq va natijalarga erishishni xohlasangiz unda bizning maktabga kiring, biz o'zimiz sizga yordam beramiz!!!
-            </p>
-        </div>
+        
         <div class="pupils-results">
-            <h2 class="text-center fw-light bg-color-p rounded py-3">O'quvchilarimiz yutuqlari</h2>
+            <h2 class="text-center fw-light bg-primary text-white rounded py-3">O'quvchilarimiz yutuqlari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
-                <div class="card mt-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array" :key="member">
-                    <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title fw-light text-center">{{ member.fullName }}</h5>
-                        <p class="card-text text-center">{{ member.aboutMember }}</p>
+                <div class="card mt-5 shadow mx-sm-5" v-for="member in pupils" :key="member.id">
+                    <div class="card-image bg-primary d-flex justify-content-center rounded-top">
+                        <img :src="'http://localhost:8888' + member.image.contentUrl" class="card-img-top rounded member_image" alt="image">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between mt-5">
+                        <h5 class="card-title fw-light text-center text-primary">{{ member.full_name }}</h5>
+                        <p class="card-text text-justify">{{ member.about_member }}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="graduates-results">
-            <h2 class="text-center fw-light bg-color-p py-3 rounded mt-5">Bitiruvchilarimiz natijalari</h2>
+            <h2 class="text-center fw-light py-3 bg-primary text-white rounded mt-5">Bitiruvchilarimiz natijalari</h2>
             <div class="cards d-flex justify-content-center flex-wrap">
-                <div class="card mt-5 shadow mx-xl-5 col-xl-3 p-3" v-for="member in array">
-                    <img src="../assets/images/enter.jpeg" class="card-img-top rounded" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title fw-light text-center">{{ member.fullName }}</h5>
-                        <p class="card-text text-center">{{ member.aboutMember }}</p>
+                <div class="card mt-5 shadow mx-sm-5" v-for="member in schoolMembers" :key="member.id">
+                    <div class="card-image bg-primary d-flex justify-content-center rounded-top">
+                        <img :src="'http://localhost:8888' + member.image.contentUrl" class="card-img-top rounded member_image" alt="image">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between mt-5">
+                        <h5 class="card-title fw-light text-center text-primary">{{ member.full_name }}</h5>
+                        <p class="card-text text-justify">{{ member.about_member }}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="useful-links pb-3 mb-4">
-            <h2 class="text-center fw-light mb-5 bg-color text-white py-3 rounded mt-5">Foydali havolalar</h2>
+            <h2 class="text-center fw-light mb-5 bg-primary text-white py-3 rounded mt-5">Foydali havolalar</h2>
             <ul class="nav navbar justify-content-around shadow-links rounded bg-white">
                 <li class="nav-item"><a href="https://www.ibo.org" target="_blank" class="nav-link">
                     <img src="../assets/images/ib-logo.png" alt="IB logo">
@@ -116,44 +108,37 @@ let array = [
 </template>
 
 <style scoped>
-.caption-section {
-    width: 100%;
-}
-.description-section p{
-    text-align: justify !important;
-}
 .useful-links img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
-.bg-color{
-    background-color: #3498DB; /* Ko'k rang */
-
-}
 .shadow-links{
-    box-shadow: 0px 0px 10px rgba(96, 195, 235); /* Havo rang shadow */
-    /* border-bottom: 2px solid #87CEEB; Havo rang chiziq */
-}
-.bg-color-p{
-    background-image: linear-gradient(135deg, #a8edea, #fed6e3);
-    color: #333;
-
-}
-.bg-color-h{
-    background-color: #6a11cb; /* Yorqin binafsha */
-    background-image: linear-gradient(135deg, #6a11cb, #2575fc); /* Binafsha va ko'k gradienti */
-
-}
-.bg-color-v{
-    background-color: #9b59b6; /* Binafsha rang */
-background: linear-gradient(45deg, #9b59b6, #8e44ad); /* Binafsha gradienti */
-
+    box-shadow: 0px 0px 10px rgba(96, 195, 235);
 }
 .card{
-    background-image: linear-gradient(135deg, #83FFA6, #FFFFFF);
+    font-size: 20px;
+    height: 450px;
+    width: 450px;
+}
+.card-image{
+    height: 150px;
 }
 .card:hover{
     box-shadow: 0 0 10px blue !important;
+}
+.member_image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50% !important;
+    margin-bottom: 50px;
+}
+.card-text{
+    min-height: 180px;
+}
+.carousel-caption{
+    position: absolute !important;
+    top: 30%;
+    left: 10%;
 }
 </style>

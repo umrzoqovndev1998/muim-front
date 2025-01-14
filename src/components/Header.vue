@@ -53,7 +53,7 @@
                     </form>
                 </div>
             </div>
-            <select @change="i18n.locale.value = $event.target.value" :value="i18n.locale.value" class="px-2 py ms-xl-2 me-2 me-xl-0 border rounded focus">
+            <select @change="i18n.locale.value = $event.target.value" :value="i18n.locale.value" class="px-2 py ms-xl-2 me-2 me-xl-0 border rounded">
                 <option value="uz">UZB</option>
                 <option value="ru">RUS</option>
                 <option value="en">ENG</option>
@@ -66,9 +66,6 @@
 .image{
     width:120px;
     height:90px;
-}
-.focus{
-    outline:none !important;
 }
 .navbar-toggler{
     border: none;
@@ -118,6 +115,7 @@ select:hover{
 }
 select{
     background-color: white !important;
+    outline: none !important;
 }
 
 

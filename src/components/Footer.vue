@@ -37,7 +37,7 @@
                  <label for="tel">
                      <input class="form-control shadow-none mb-2" placeholder="Tel" size="40" type="tel" id="tel" name="tel" />
                  </label>
-                 <input class="form-control mb-4" type="submit" value="Yuborish"/>
+                 <input class="form-control mb-4 bg-primary" type="submit" value="Yuborish"/>
              </form>
          </div>
      </div>
@@ -49,15 +49,10 @@
 }
 [type="submit"]{
     color: white !important;
-    background-color: #3498DB !important; /* Ko'k rang */
     border: none !important;
 }
 .nav-link:hover{
     text-decoration: underline;
-}
-[type="submit"]:hover{
-    background-color: #21618C !important; /* Sal to'q ko'k rang */
-    color: white !important;
 }
 .footer-logo{
     width: 40px;

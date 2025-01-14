@@ -45,10 +45,17 @@ function changeIcon(){
 
 <template>
 <div class="container-fluid row d-flex justify-content-center">
-    <router-link to="/">
-        <img src="../assets/icons/back.png" alt="home page link">
-    </router-link>
-    <div class="col-12 col-sm-8 col-md-6 col-xl-4 ms-4">
+    <div class="header-login">
+        <router-link to="/">
+            <img class="home__link" src="../assets/icons/left.png" alt="home page link">
+        </router-link>
+        <select class="border rounded">
+                <option value="uz">UZB</option>
+                <option value="ru">RUS</option>
+                <option value="en">ENG</option>
+        </select>
+    </div>
+    <div class="col-12 col-sm-8 col-md-6 col-xl-4 ms-4 form-login">
         <h1 class="text-center fw-normal">Kirish</h1>
         <form @submit="auth">
              <FormInput 
@@ -72,7 +79,7 @@ function changeIcon(){
              <img :src="pathIcon" alt="" width="15px">
             </button>
             <div class="text-end text-center mt-4">
-                <button type="submit" class="form-control shadow-none bg-primary text-white fs-5">
+                <button type="submit" class="form-control shadow-none btn btn-primary text-white fs-5">
                     <span v-if="!isLoading">Kirish</span>
                     <span v-else class="spinner-border spinner-border-sm text-light"></span>
                 </button>
@@ -83,9 +90,6 @@ function changeIcon(){
 </template>
 
 <style scoped>
-.container-fluid {
-    height: 80vh;
-}
 form{
     position: relative;
 }
@@ -105,12 +109,31 @@ form{
 .form-btn:hover{
     background-color: rgb(230, 229, 229);
 }
-img{
-    margin-top: 20px;
+.home__link{
     border-radius: 50%;
-    padding: 10px;
+    padding: 6px;
 }
-img:hover{
+.home__link:hover{
     background-color: #e3dfdf;
+}
+select{
+    cursor: pointer !important;
+    padding: 8px !important;
+    background-color: white;
+    outline: none !important;
+}
+.header-login{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.form-login{
+    margin-top: 15vh;
 }
 </style>
