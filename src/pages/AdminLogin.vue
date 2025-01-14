@@ -79,7 +79,7 @@ function changeIcon(){
              <img :src="pathIcon" alt="" width="15px">
             </button>
             <div class="text-end text-center mt-4">
-                <button type="submit" class="form-control shadow-none btn btn-primary text-white fs-5">
+                <button type="submit" class="form-control shadow-none bg-color text-white fs-5">
                     <span v-if="!isLoading">Kirish</span>
                     <span v-else class="spinner-border spinner-border-sm text-light"></span>
                 </button>
@@ -135,5 +135,8 @@ a{
 }
 .form-login{
     margin-top: 15vh;
+}
+.bg-color{
+    background-color:#0000FF;
 }
 </style>
