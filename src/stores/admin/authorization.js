@@ -4,7 +4,7 @@ import axios from "axios";
 export const useAuthorization = defineStore('authorization', () => {
     function adminAuth(data) {
         return new Promise((resolve, reject) => {
-            axios.post('muim-api.vercel.app/api/admins/auth',data)
+            axios.post('http://localhost:8888/api/admins/auth',data)
                 .then((res) => {
                     // console.log("Token olindi!");
                     localStorage.setItem('token', res.data.token)
